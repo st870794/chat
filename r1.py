@@ -8,11 +8,11 @@ def read_file(filename):
 
 def convert(lines):
 	new = []
-	person = None
+	person = None # 有預設值避免crash
 	for line in lines:
 		if line == 'Phoenix Hsu':
 			person = 'Phoenix Hsu'
-			continue
+			continue # 跳過人名那一迴
 		elif line == '蔡真真':
 			person = '蔡真真'
 			continue
@@ -30,5 +30,5 @@ def main():
 	lines = read_file('input.txt')
 	lines = convert(lines)
 	write_file('output.txt', lines)
-	
+
 main()
